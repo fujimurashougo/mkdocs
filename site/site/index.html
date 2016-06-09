@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <title>MkDocs使用日記</title>
+  
+
+  <link rel="shortcut icon" href="./img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="./css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="./css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="./css/highlight.css">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "None";
+    var mkdocs_page_input_path = "index.md";
+    var mkdocs_page_url = "/";
+  </script>
+  
+  <script src="./js/jquery-2.1.1.min.js"></script>
+  <script src="./js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="./js/highlight.pack.js"></script>
+  <script src="./js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="." class="icon icon-home"> MkDocs使用日記</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 current">
+        <a class="current" href=".">Home</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#mkdocs">MkDocs</a></li>
+                
+                    <li><a class="toctree-l4" href="#_1">環境</a></li>
+                
+                    <li><a class="toctree-l4" href="#_2">使ってみた。</a></li>
+                
+            
+            </ul>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="about/">About</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="info/">Info</a>
+        
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href=".">MkDocs使用日記</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Home</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        
+          <a href="https://github.com/spatter/mkdocs/" class="icon icon-github"> Edit on GitHub</a>
+        
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="mkdocs">MkDocs</h1>
+<p><a href="http://mkdocs.org">公式サイト</a></p>
+<p>Static Site Generator（静的サイト作成ツール）の１つ。サイトの枠組みを簡単に作ることができる。本文にマークダウン方式を使える。
+<a href="http://matome.naver.jp/odai/2138951779950545401">参考</a></p>
+<h2 id="_1">環境</h2>
+<ul>
+<li>Python</li>
+<li>pip</li>
+</ul>
+<p>今回はCloud9（仮想サーバー）を使用。</p>
+<h2 id="_2">使ってみた。</h2>
+<pre><code>    公式サイトを見ながら使ってみた。
+</code></pre>
+<p>1 pipを使ってmkdocsをインストール。（先頭に「sudo」が必要らしい）</p>
+<pre><code>    sudo pip install mkdocs
+</code></pre>
+<p>2 mkdocsのフォルダを作成。ディレクトリを変更する。</p>
+<pre><code>    mkdocs new フォルダ名
+    cd フォルダ名
+</code></pre>
+<p>3 サイトをランする。（Cloud9でランするには-a以下が必要）</p>
+<pre><code>    mkdocs serve -a 0.0.0.0:8080
+</code></pre>
+<p>4 http://0.0.0.0:8080をクリックすることでサイトをブラウザで表示できる。</p>
+<p>5 サイト名を変更する。</p>
+<pre><code>    mkdocs.yml内のsite_name: サイト名
+</code></pre>
+<p>5 ラン中のバッシュの使い方が分からなかったので、新たにバッシュを開いてそっちで続ける。ディレクトリの変更を忘れずに。</p>
+<p>6 新しいページを加える。今回は外部のコンテンツをそのまま加えてみる。<a href="https://hydrocul.github.io/wiki/commands/curl.html">curlについて</a></p>
+<pre><code>    curl 'jaspervdj.be/lorem-markdownum/markdown.txt' &gt; docs/about.md
+</code></pre>
+<p>7 ヘッダーの変更。ただ、今の段階ではなくても勝手にやってくれている。</p>
+<pre><code>    mkdocs.yml内に
+        pages:
+        - Home: index.md
+        - About: about.md
+</code></pre>
+<p>8 レイアウトの変更。</p>
+<pre><code>    mkdocs.yml内にtheme: readthedocs
+</code></pre>
+<p>0 ファイルツリー内で新しいファイルを作る分には問題なかったが、別階級のファイルをコピペした時はうまく動かなかった。</p>
+<p>終了。</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="about/" class="btn btn-neutral float-right" title="About">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/spatter/mkdocs/" class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+      
+        <span style="margin-left: 15px"><a href="about/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>
+
+<!--
+MkDocs version : 0.15.3
+Build Date UTC : 2016-06-09 06:19:37.609036
+-->
