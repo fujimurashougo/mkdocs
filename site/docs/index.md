@@ -31,27 +31,34 @@ Static Site Generator（静的サイト作成ツール）の１つ。サイト�
     
 4 http://0.0.0.0:8080をクリックすることでサイトをブラウザで表示できる。
 
-5 サイト名を変更する。
+5 サイトのランは「Ctrl + C」で停止可能
+
+6 サイト名を変更する。
 
         mkdocs.yml内のsite_name: サイト名
     
-5 ラン中のバッシュの使い方が分からなかったので、新たにバッシュを開いてそっちで続ける。ディレクトリの変更を忘れずに。
-
-6 新しいページを加える。今回は外部のコンテンツをそのまま加えてみる。[curlについて](https://hydrocul.github.io/wiki/commands/curl.html)
+7 新しいページを加える。今回は外部のコンテンツをそのまま加えてみる。[curlについて](https://hydrocul.github.io/wiki/commands/curl.html)
 
         curl 'jaspervdj.be/lorem-markdownum/markdown.txt' > docs/about.md
     
-7 ヘッダーの変更。ただ、今の段階ではなくても勝手にやってくれている。
+8 ヘッダーの変更。ただ、今の段階ではなくても勝手にやってくれている。
 
         mkdocs.yml内に
             pages:
             - Home: index.md
             - About: about.md
                             
-8 レイアウトの変更。
+9 レイアウトの変更。
 
         mkdocs.yml内にtheme: readthedocs
     
+10 markdownをhtmlに。
+
+        mkdocs build
+
+11 GitHubページにアップロード。
+
+        mkdocs gh-deploy
+
 0 ファイルツリー内で新しいファイルを作る分には問題なかったが、別階級のファイルをコピペした時はうまく動かなかった。
 
-終了。
