@@ -146,24 +146,29 @@
 <pre><code>    mkdocs serve -a 0.0.0.0:8080
 </code></pre>
 <p>4 http://0.0.0.0:8080をクリックすることでサイトをブラウザで表示できる。</p>
-<p>5 サイト名を変更する。</p>
+<p>5 サイトのランは「Ctrl + C」で停止可能</p>
+<p>6 サイト名を変更する。</p>
 <pre><code>    mkdocs.yml内のsite_name: サイト名
 </code></pre>
-<p>5 ラン中のバッシュの使い方が分からなかったので、新たにバッシュを開いてそっちで続ける。ディレクトリの変更を忘れずに。</p>
-<p>6 新しいページを加える。今回は外部のコンテンツをそのまま加えてみる。<a href="https://hydrocul.github.io/wiki/commands/curl.html">curlについて</a></p>
+<p>7 新しいページを加える。今回は外部のコンテンツをそのまま加えてみる。<a href="https://hydrocul.github.io/wiki/commands/curl.html">curlについて</a></p>
 <pre><code>    curl 'jaspervdj.be/lorem-markdownum/markdown.txt' &gt; docs/about.md
 </code></pre>
-<p>7 ヘッダーの変更。ただ、今の段階ではなくても勝手にやってくれている。</p>
+<p>8 ヘッダーの変更。ただ、今の段階ではなくても勝手にやってくれている。</p>
 <pre><code>    mkdocs.yml内に
         pages:
         - Home: index.md
         - About: about.md
 </code></pre>
-<p>8 レイアウトの変更。</p>
+<p>9 レイアウトの変更。</p>
 <pre><code>    mkdocs.yml内にtheme: readthedocs
 </code></pre>
+<p>10 markdownをhtmlに。</p>
+<pre><code>    mkdocs build
+</code></pre>
+<p>11 GitHubページにアップロード。</p>
+<pre><code>    mkdocs gh-deploy
+</code></pre>
 <p>0 ファイルツリー内で新しいファイルを作る分には問題なかったが、別階級のファイルをコピペした時はうまく動かなかった。</p>
-<p>終了。</p>
               
             </div>
           </div>
@@ -211,5 +216,5 @@
 
 <!--
 MkDocs version : 0.15.3
-Build Date UTC : 2016-06-09 06:19:37.609036
+Build Date UTC : 2017-01-07 03:48:05.590193
 -->
